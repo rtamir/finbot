@@ -13,6 +13,7 @@ intents:
 - chitchat
 - thank
 - ask_whatspossible
+<<<<<<< HEAD
 - chitchat/ask_howdoing
 - chitchat/ask_ishuman
 - chitchat/ask_isbot
@@ -26,15 +27,44 @@ intents:
 - chitchat/ask_languagesbot
 - chitchat/ask_whoisit
 - chitchat/ask_builder
+=======
+- request_personal_details
+- request_joining_date
+- share_employee_id
+- chitchat/ask_builder
+- chitchat/ask_howdoing
+- chitchat/ask_languagesbot
+- chitchat/ask_howbuilt
+- chitchat/ask_howold
+- chitchat/ask_ishuman
+- chitchat/ask_weather
+- chitchat/handleinsult
+- chitchat/ask_isbot
+- chitchat/nicetomeeyou
+- chitchat/ask_wherefrom
+- chitchat/ask_whoisit
+- chitchat/telljoke
+>>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
 entities:
 - name
 - language
 - location
+<<<<<<< HEAD
 responses:
   utter_greet:
   - text: Hey there, my name is Finbot.
   - text: Hi, I'm Finbot!
   - text: Hi! My name's Finbot.
+=======
+- personal_details
+- emp_id
+- joined_on
+responses:
+  utter_greet:
+  - text: Hey there, my name is Finbot. How can I help?
+  - text: Hi, I'm Finbot!. How can I help?
+  - text: Hi! My name's Finbot. How can I help?
+>>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
   utter_noworries:
   - text: No worries!
   - text: You're welcome!
@@ -76,8 +106,17 @@ responses:
   - text: "You can ask me following queries or any other queries related to your payroll.\
       \ \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health\
       \ insurance policy number?"
+<<<<<<< HEAD
 actions:
 - respond_chitchat
+=======
+  utter_ask_employee_id:
+  - text: What is your Employee Id?
+actions:
+- respond_chitchat
+- action_personal_details
+- action_joining_date
+>>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
 - utter_greet
 - utter_noworries
 - utter_anything_else
@@ -91,3 +130,7 @@ actions:
 - utter_nohelp
 - utter_source_code
 - utter_what_possible
+<<<<<<< HEAD
+=======
+- utter_ask_employee_id
+>>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
