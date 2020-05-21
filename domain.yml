@@ -1,5 +1,5 @@
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 1
   carry_over_slots_to_new_session: true
 intents:
 - affirm
@@ -13,23 +13,18 @@ intents:
 - chitchat
 - thank
 - ask_whatspossible
-<<<<<<< HEAD
-- chitchat/ask_howdoing
-- chitchat/ask_ishuman
-- chitchat/ask_isbot
-- chitchat/telljoke
-- chitchat/ask_howbuilt
-- chitchat/handleinsult
-- chitchat/nicetomeeyou
-- chitchat/ask_wherefrom
-- chitchat/ask_weather
-- chitchat/ask_howold
-- chitchat/ask_languagesbot
-- chitchat/ask_whoisit
-- chitchat/ask_builder
-=======
 - request_personal_details
 - request_joining_date
+- request_health_policy
+- request_monthly_gross_deductions
+- request_monthly_deductions
+- request_monthly_earnings
+- request_reporting_manager
+- request_guest_password
+- request_project
+- request_tax_slab
+- request_latest_ctc
+- request_leave_balance
 - share_employee_id
 - chitchat/ask_builder
 - chitchat/ask_howdoing
@@ -44,47 +39,71 @@ intents:
 - chitchat/ask_wherefrom
 - chitchat/ask_whoisit
 - chitchat/telljoke
->>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
+- additionallinks
+- weather
+- cities
+- fbp
+- attendance
+- operations
+- infrastructure
+- travelrealated
+- typesofleave
+- holidaycalendar
+- hyderabad_calendar
+- bangalore_calendar
+- out_of_scope
 entities:
 - name
 - language
 - location
-<<<<<<< HEAD
-responses:
-  utter_greet:
-  - text: Hey there, my name is Finbot.
-  - text: Hi, I'm Finbot!
-  - text: Hi! My name's Finbot.
-=======
 - personal_details
 - emp_id
 - joined_on
+- tax_slab_chosen
+- gross_deductions
+- deductions
+- earnings
+- reporting_manager
+- project
+- tax_slab
+- guest_wifi_password
+- leave_balance
+- latest_ctc
+- health_policy_number
+slots:
+  emp_id:
+    type: unfeaturized
+  location:
+    type: text
+  name:
+    type: text
 responses:
   utter_greet:
-  - text: Hey there, my name is Finbot. How can I help?
-  - text: Hi, I'm Finbot!. How can I help?
-  - text: Hi! My name's Finbot. How can I help?
->>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
+  - text: Namasthey!, I am Finbot 😷. Your Personal Assistant!
   utter_noworries:
-  - text: No worries!
-  - text: You're welcome!
-  - text: I'm happy to help.
+  - text: No worries! 🙂
+  - text: You're welcome! 🙂
+  - text: I'm happy to help. 🙂
   utter_anything_else:
-  - text: Is there anything else I can help you with?
+  - text: "I have something more for you if you would like to explore about our organization.\n\
+      \ Here's the link for [HR berry] (https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)\n\
+      \ Here's the link for [Aspire] (https://aspire.atmecs.online/login)"
   utter_bye:
-  - text: Goodbye!
-  - text: Bye!
+  - text: Thank you and stay safe from Corona.😷
   - text: Ciao!
-  - text: Bye, was nice talking to you!
-  - text: Bye bye!
+  - text: Bye, was nice talking to you! Don't forget to wear mask. 😷
+  - text: Bye bye! 🙂
   utter_what_help:
   - text: Ok, what can I help you with?
+  utter_thanks_for_the_details:
+  - text: Thank you, What can I help you with?
+  - text: Thanks for the details, how can I help you?
   utter_thumbsup:
   - text: 👍
   - text: Okay.
-  - text: Got it.
+  - text: Okay I Got it. 😎
   utter_possibilities:
-  - text: You can ask me about your payroll related quieres
+  - text: You can ask me about HR related quieres.
   utter_react_negative:
   - text: 😕
   - text: 😞
@@ -96,27 +115,64 @@ responses:
   - text: 👏
   - text: 😍
   utter_canthelp:
-  - text: I'm sorry I couldn't help you.
+  - text: Mmmmmm. I'm sorry I couldn't help you. May be I need to learn more.
   utter_nohelp:
   - text: For now that's all I can do, so feel free to try it out. If you have any
       suggestions for what I should learn, let me know!
   utter_source_code:
-  - text: My code is not open source
+  - text: It is very costly to see my source code. Hehe 😊
   utter_what_possible:
-  - text: "You can ask me following queries or any other queries related to your payroll.\
-      \ \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health\
-      \ insurance policy number?"
-<<<<<<< HEAD
-actions:
-- respond_chitchat
-=======
+  - text: 'You can ask me following queries :'
+    buttons:
+    - title: Payroll/HR/Organisation related queries
+      payload: additionallinks
+    - title: I can tell a joke
+      payload: Can you tell a joke?
+    - title: I can tell you about the weather
+      payload: temperature today
+    - title: About me
+      payload: What is your name?
   utter_ask_employee_id:
-  - text: What is your Employee Id?
+  - text: Could you please provide your Employee Id?
+  utter_deny_accept:
+  - text: Is there anything else I can help you with?
+    buttons:
+    - title: Yes
+      payload: /ask_whatspossible
+    - title: No
+      payload: /deny
+  utter_capture_empid:
+  - text: Please enter your empid, to proceed further
+  utter_city:
+  - text: Which city you want to check for?
+  utter_temp:
+  - text: Today's temperature in {city} is {temp} degree Celcius.
+  utter_fbp:
+  - text: "Login to Aspire -> Human Resources -> Flexible benefit Plan Components\
+      \ Declaration \n Here is the link to [Aspire](https://aspire.atmecs.online/login)"
+  utter_attendance:
+  - text: "Login to HR Berry -> My Attendance. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
+  utter_applyleave:
+  - text: "Login to HR Berry -> Leave. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
+  utter_travelrelated:
+  - text: "For travel and Immigration related please reach out to \n raj.murgesan@atmecs.com"
+  utter_operations:
+  - text: "For Operations related please reach out to \n narsimha.mukkera@atmecs.com\n\
+      \ babu.krishnan@atmecs.com"
+  utter_infrastructure:
+  - text: "For Infrastructure related please reach out to \ngiridhar.obulesugari@atmecs.com\n\
+      To raise a ticket Navigate to Aspire -> HumanResources -> IT Help Desk \nHere\
+      \ is the link to [Aspire](https://aspire.atmecs.online/login)"
+  utter_holidaycalendar_city:
+  - text: here is the holiday calendar
+    attachment:
+      type: image
+      payload:
+        src: static/images/Hyderabad_holiday_Calendar.jpg
 actions:
 - respond_chitchat
 - action_personal_details
 - action_joining_date
->>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
 - utter_greet
 - utter_noworries
 - utter_anything_else
@@ -130,7 +186,28 @@ actions:
 - utter_nohelp
 - utter_source_code
 - utter_what_possible
-<<<<<<< HEAD
-=======
 - utter_ask_employee_id
->>>>>>> e3f7160084277926767c3c0f599a089e763a7b15
+- action_health_policy
+- action_monthly_gross_deduction
+- action_monthly_deductions
+- action_monthly_earnings
+- action_reporting_manager
+- action_guest_password
+- action_project
+- action_tax_slab
+- action_latest_ctc
+- action_leave_balance
+- action_get_employee_id
+- action_weather_api
+- utter_thanks_for_the_details
+- utter_deny_accept
+- utter_capture_empid
+- utter_city
+- utter_temp
+- utter_fbp
+- utter_attendance
+- utter_applyleave
+- utter_travelrelated
+- utter_operations
+- utter_infrastructure
+- utter_holidaycalendar_city

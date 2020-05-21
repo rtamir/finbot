@@ -1681,6 +1681,210 @@
 - This is my employee code [11](emp_id).
 - My Employee Code is [12](emp_id).
 - Here is my employee Code [13](emp_id).
+- My id is [1253](emp_id)
+- My id is [6](emp_id)
+- My empid is [847](emp_id)
+- [304](emp_id)
+
+## intent:request_health_policy
+- Please provide my [health_policy_number](health_policy_number)?
+- Share my [health_policy_number](health_policy_number)?
+- My I know my [health_policy_number](health_policy_number)?
+- What is my [health_policy_number](health_policy_number)?
+- [health_policy_number](health_policy_number) please?
+- Let me know my [health_policy_number](health_policy_number)?
+
+## intent:request_monthly_gross_deductions
+- Please provide my [monthly_gross_deductions](gross_deductions)?
+- Share my [monthly_gross_deductions](gross_deductions)?
+- My I know my [monthly_gross_deductions](gross_deductions)?
+- What is my [monthly_gross_deductions](gross_deductions)?
+- [monthly_gross_deductions](gross_deductions) please?
+- Let me know my [monthly_gross_deductions](gross_deductions)?
+
+## intent:request_monthly_deductions
+- Please provide my [monthly_deductions](deductions)?
+- Share my [monthly_deductions](deductions)?
+- My I know my [monthly_deductions](deductions)?
+- What is my [monthly_deductions](deductions)?
+- [monthly_deductions](deductions) please?
+- Let me know my [monthly_deductions](deductions)?
+
+## intent:request_monthly_earnings
+- Please provide my [monthly_earnings](earnings)?
+- Share my [monthly_earnings](earnings)?
+- My I know my [monthly_earnings](earnings)?
+- What is my [monthly_earnings](earnings)?
+- [monthly_earnings](earnings) please?
+- Let me know my [monthly_earnings](earnings)?
+
+## intent:request_reporting_manager
+- Please provide my [reporting_manager](reporting_manager)?
+- Share my [reporting_manager](reporting_manager)?
+- My I know my [reporting_manager](reporting_manager)?
+- What is my [reporting_manager](reporting_manager)?
+- [reporting_manager](reporting_manager) please?
+- Let me know my [reporting_manager](reporting_manager)?
+
+## intent:request_guest_password
+- Please provide my [guest_wifi_password](guest_wifi_password)?
+- Share my [guest_wifi_password](guest_wifi_password)?
+- My I know my [guest_wifi_password](guest_wifi_password)?
+- What is my [guest_wifi_password](guest_wifi_password)?
+- [guest_wifi_password](guest_wifi_password) please?
+- Let me know my [guest_wifi_password](guest_wifi_password)?
+
+## intent:request_project
+- Please provide my [project](project)?
+- Share my [project](project)?
+- My I know my [project](project)?
+- What is my [project](project)?
+- [project](project) please?
+- Let me know my [project](project)?
+- Assigned to which [project](project)?
+
+## intent:request_tax_slab
+- Please provide my [tax_slab](tax_slab)?
+- Share my [tax_slab](tax_slab)?
+- My I know my [tax_slab](tax_slab)?
+- What is my [tax_slab](tax_slab)?
+- [tax_slab](tax_slab) please?
+- Let me know my [tax_slab](tax_slab)?
+
+## intent:request_latest_ctc
+- Please provide my [latest_ctc](latest_ctc)?
+- Share my [latest_ctc](latest_ctc)?
+- My I know my [latest_ctc](latest_ctc)?
+- What is my [latest_ctc](latest_ctc)?
+- [latest_ctc](latest_ctc) please?
+- Let me know my [latest_ctc](latest_ctc)?
+
+## intent:request_leave_balance
+- Please provide my [leave_balance](leave_balance)?
+- Share my [leave_balance](leave_balance)?
+- My I know my [leave_balance](leave_balance)?
+- What is my [leave_balance](leave_balance)?
+- [leave_balance](leave_balance) please?
+- Let me know my [leave_balance](leave_balance)?
+
+## intent:additionallinks
+- What additional details can you share?
+- organisation details
+- more policies
+- more information
+- supporting details
+- links
+- HRBerry
+- Aspire
+
+## intent:out_of_scope
+- I want to order food
+- What is 2 + 2?
+- Who’s the US President?
+- I need a job
+- Who is the PrimeMinister of our Country?
+
+## intent:weather
+- what's the weather
+- i want to know the weather of today
+- tell me the weather forecast
+- how's the weather today
+- temperature today
+- weather outside
+- tell me about the weather
+
+## intent:cities
+- [Hyderabad](location)
+- [Ahmedabad](location)
+- [Jaipur](location)
+- [pune](location)
+- [mumbai](location)
+- [chennai](location)
+- [Delhi](location)
+- [Lucknow](location)
+- [Jaipur](location)
+- [Patna](location)
+- [chandigarh](location)
+
+## intent:fbp
+- Where can I declare my fbp?
+- Flexible benefit plan components declaration
+- fbp declaration?
+- what is flexible benefit plan
+- what is fbp
+- help me find flexible benefit plan
+
+## intent:attendance
+- Where Can I check my attendance
+- attendance related queries
+- attendance check
+- where can I check my swipe in swipe out
+- swipe in time
+- swipe out time
+- where can I check my work hours
+- my work hours
+- my total time
+
+## intent:operations
+- whom can I reach for Operations related
+- who is the Admin in our organisation
+- housekeeping related complaints
+- Admin related queries
+
+## intent:travelrealated
+- whom can I reach for travel related queries
+- travel related
+- immigration related queries
+- travel and immigration
+- visa processing
+
+## intent:infrastructure
+- Whom should I reach out for my system issues
+- system issues
+- laptop issues
+- hardware upgrade
+- RAM Issues
+- system software issues
+- system startup problems
+- software installation
+- laptop not working
+- laptop issues
+- RAM upgrade
+- infrastructure related
+
+## intent:holidaycalendar
+- Holiday Calendar
+- holiday list for [hyderabad](location)
+- holiday list for [Bangalore](location)
+- where can I check the holiday calendar
+- when is the next holiday
+- any holidays this month?
+- any long weekends?
+- festivals this month
+- when is the next holiday?
+- time off?
+- when is the company holiday?
+- where can I find the holiday calendar
+- Please show me list of holidays
+- holiday calendar for [Hyderabad](location)
+
+## intent:typesofleave
+- what types of leave are there
+- different types of leave
+- types of leaves
+- leave types
+
+## intent:bangalore_calendar
+- what is holiday Calendar for [Bangalore](location)
+- [Bangalore](location)
+- holiday list
+- festivals list
+
+## intent:hyderabad_calendar
+- what is holiday Calendar for [Hyderabad](location)
+- [Hyderabad](location)
+- holiday list
+- festivals list
 
 ## synonym:all
 - both
