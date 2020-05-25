@@ -281,7 +281,7 @@ class ActionTaxSlab(Action):
         response = _fetch_employee_details(Empid)
         response_text = _get_tax_slab(response)
 
-        dispatcher.utter_message(response_text)
+        dispatcher.utter_message(attachment={ "type":"image", "payload":{ "src": "static\images\TaxSlabInfo.JPG" }})
         return []
 
 class ActionTaxSlabChosen(Action):
