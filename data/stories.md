@@ -309,6 +309,16 @@
     - utter_thanks_for_the_details
 * request_tax_slab
     - action_tax_slab
+    
+## greet tax slab
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* request_tax_slab_chosen
+    - action_tax_slab_chosen
+    - action_tax_slab
 
 ## greet latest ctc
 * greet

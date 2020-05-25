@@ -23,6 +23,7 @@ intents:
 - request_guest_password
 - request_project
 - request_tax_slab
+- request_tax_slab_chosen
 - request_latest_ctc
 - request_leave_balance
 - request_food_plus_card_amount
@@ -197,6 +198,7 @@ actions:
 - action_guest_password
 - action_project
 - action_tax_slab
+- action_tax_slab_chosen
 - action_latest_ctc
 - action_leave_balance
 - action_get_employee_id

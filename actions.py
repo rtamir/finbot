@@ -78,6 +78,8 @@ def _get_project(data) -> Text:
 def _get_tax_slab(data) -> Text:
     return "New Tax Slab is: {0}\nOld Tax Slab is:{1}".format(data['tax_slab']['new'], data['tax_slab']['old'])
 
+def _get_tax_slab_chosen(data) -> Text:
+    return f"The tax slab you have chosen is {data['tax_slab_chosen']}"
 
 def _latest_ctc(data) -> Text:
     year_ctc = "Your yearly CTC below: \nBasic: {0},\nHRA: {1},\nLTA: {2},\n" \
@@ -278,6 +280,22 @@ class ActionTaxSlab(Action):
         Empid = tracker.get_slot("emp_id")
         response = _fetch_employee_details(Empid)
         response_text = _get_tax_slab(response)
+
+        dispatcher.utter_message(response_text)
+        return []
+
+class ActionTaxSlabChosen(Action):
+
+    def name(self) -> Text:
+        return "action_tax_slab_chosen"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_tax_slab_chosen(response)
 
         dispatcher.utter_message(response_text)
         return []
