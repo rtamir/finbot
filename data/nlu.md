@@ -1667,6 +1667,14 @@
 - [Joining date](joined_on) please?
 - Let me know my [Joining date](joined_on)?
 
+## intent:request_food_plus_card_amount 
+- Please provide my [food plus card amount](food_plus_card_amount)?
+- Share my [food plus card amount](food_plus_card_amount)?
+- My I know my [food plus card amount](food_plus_card_amount)?
+- What is my [food plus card amount](food_plus_card_amount)?
+- [food plus card amount](food_plus_card_amount) please?
+- Let me know my [food plus card amount](food_plus_card_amount)?
+
 ## intent:share_employee_id
 - My employee id is [1](emp_id).
 - [2](emp_id) is my employee id.

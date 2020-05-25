@@ -3,6 +3,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import requests
 
+from weather import fetchWeatherinfo
+
 ENDPOINT = {
     "base": "https://finbot-back-end.herokuapp.com/api/employees/{}"
 }
@@ -32,6 +34,9 @@ def _employee_joining_date(data) -> Text:
 
 def _get_employee_health_insurance_policy(data) -> Text:
     return f"Your health policy number is {data['health_policy_number']}"
+
+def _get_food_plus_card_amount(data) -> Text:
+    return f"Your monthly food plus card amount is {data['latest_ctc']['month']['food_plus_card']}"
 
 def _get_monthly_gross_deduction(data) -> Text:
     return f"Your gross deduction is {data['latest_pay_slip']['deductions']['gross_deductions']}"
@@ -127,6 +132,22 @@ class ActionJoiningDate(Action):
         Empid = tracker.get_slot("emp_id")
         response = _fetch_employee_details(Empid)
         response_text = _employee_joining_date(response)
+
+        dispatcher.utter_message(response_text)
+        return []
+
+class ActionFoodPlusCardAmount(Action):
+
+    def name(self) -> Text:
+        return "action_food_plus_card_amount"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_food_plus_card_amount(response)
 
         dispatcher.utter_message(response_text)
         return []

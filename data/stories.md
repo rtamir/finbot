@@ -228,6 +228,15 @@
     - utter_thanks_for_the_details
 * request_joining_date
     - action_joining_date
+    
+## greet joining date
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* request_food_plus_card_amount
+    - action_food_plus_card_amount
 
 ## greet health policy number
 * greet

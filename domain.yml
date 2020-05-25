@@ -25,6 +25,7 @@ intents:
 - request_tax_slab
 - request_latest_ctc
 - request_leave_balance
+- request_food_plus_card_amount
 - share_employee_id
 - chitchat/ask_builder
 - chitchat/ask_howdoing
@@ -70,6 +71,7 @@ entities:
 - leave_balance
 - latest_ctc
 - health_policy_number
+- food_plus_card_amount
 slots:
   emp_id:
     type: unfeaturized
@@ -199,6 +201,7 @@ actions:
 - action_leave_balance
 - action_get_employee_id
 - action_weather_api
+- action_food_plus_card_amount
 - utter_thanks_for_the_details
 - utter_deny_accept
 - utter_capture_empid
